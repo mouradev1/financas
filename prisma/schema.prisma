@@ -14,11 +14,11 @@ model categoria {
 }
 
 model financa {
-  id                BigInt    @id @default(autoincrement())
+  id                Int       @id @default(autoincrement())
   id_categoria      Int
   id_usuario        Int
   despesa_descricao String    @db.VarChar(30)
-  valor             Decimal   @db.Decimal(15, 2)
+  valor             Decimal   @db.Decimal(15, 3)
   status            Boolean?
   data_despesa      DateTime? @db.Date
   data_pgto_despesa DateTime? @db.Timestamp(6)
